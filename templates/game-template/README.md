@@ -1,58 +1,53 @@
 # Game Template
 
-Quick start for adding new games to Game Hub.
+Quick start template for adding new games to Game Hub.
 
-## Steps
+## Quick Reference
 
-1. **Copy Template**
-   ```bash
-   cp -r templates/game-template src/games/your-game-name
-   ```
+1. Copy this template to `src/games/your-game-name`
+2. Implement game logic in `GameEngine.tsx`
+3. Add metadata to `src/data/games.ts`
+4. Create page in `src/pages/games/YourGame.tsx`
+5. Add route to `App.tsx`
+6. Test locally with `npm run dev`
 
-2. **Update metadata.json**
-   - Set id, title, slug, creator
-   - Add thumbnail URL
-   - Set category and difficulty
-   - Define controls
+## Complete Documentation
 
-3. **Implement Game**
-   - Edit `GameEngine.ts` with game logic
-   - Use canvas API for rendering
-   - Handle keyboard/mouse input
+For detailed instructions, see:
 
-4. **Add to Data**
-   ```typescript
-   // src/data/games.ts
-   import metadata from '../games/your-game-name/metadata.json';
-   export const games = [...games, metadata];
-   ```
-
-5. **Create Route**
-   ```typescript
-   // App.tsx
-   import YourGame from './src/pages/games/YourGame';
-   <Route path="/games/your-slug" element={<YourGame />} />
-   ```
-
-6. **Test**
-   ```bash
-   npm run dev
-   ```
+- **[GAME_TEMPLATE.md](../../docs/GAME_TEMPLATE.md)** - Complete game development guide
+- **[STYLE_GUIDE.md](../../docs/STYLE_GUIDE.md)** - Design system and colors
+- **[TESTING.md](../../docs/TESTING.md)** - QA checklist
+- **[AGENTS.md](../../AGENTS.md)** - Development principles
 
 ## Game Engine Basics
 
-- `update()` - Game logic (60fps)
-- `draw()` - Render graphics
-- `handleKeyDown/Up()` - Input handling
-- Canvas size: 800x450px
+- **Canvas size:** 800x450px (16:9 aspect ratio)
+- **Frame rate:** 60fps using `requestAnimationFrame`
+- **update()** - Game logic
+- **draw()** - Rendering
+- **Input handling** - Keyboard/mouse events
 
-## Style Guide
+## Style Quick Reference
 
-Use retro colors:
+**Colors:**
 - Cyan: `#00f0ff`
 - Pink: `#f43f8e`
 - Yellow: `#fffc40`
 - Purple: `#2d0b4d`
 
-Font: Press Start 2P (arcade style)
+**Fonts:**
+- Arcade: Press Start 2P
+- Body: Space Grotesk
+
+**Hero Height:** 350px on all pages
+
+## Need Help?
+
+See the complete [GAME_TEMPLATE.md](../../docs/GAME_TEMPLATE.md) guide for:
+- Pygame to Canvas conversion
+- Step-by-step implementation
+- Code examples
+- Testing checklist
+- Integration steps
 

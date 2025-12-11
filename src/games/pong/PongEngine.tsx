@@ -5,9 +5,10 @@ interface PongGameProps {
   isPlaying: boolean;
   gameStarted: boolean;
   setGameStarted: (started: boolean) => void;
+  gameOver: boolean;
 }
 
-export const PongGame: React.FC<PongGameProps> = ({ onScoreUpdate, isPlaying, gameStarted, setGameStarted }) => {
+export const PongGame: React.FC<PongGameProps> = ({ onScoreUpdate, isPlaying, gameStarted, setGameStarted, gameOver }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>(0);
   
@@ -63,7 +64,7 @@ export const PongGame: React.FC<PongGameProps> = ({ onScoreUpdate, isPlaying, ga
     canvas.height = 450;
 
     const update = () => {
-      if (!isPlaying || !gameStarted) return;
+      if (!isPlaying || !gameStarted || gameOver) return;
 
       const state = gameState.current;
 
@@ -188,7 +189,7 @@ export const PongGame: React.FC<PongGameProps> = ({ onScoreUpdate, isPlaying, ga
     return () => {
       cancelAnimationFrame(animationRef.current);
     };
-  }, [isPlaying, gameStarted, onScoreUpdate]);
+  }, [isPlaying, gameStarted, gameOver, onScoreUpdate]);
 
   return (
     <div className="relative w-full aspect-[16/9] bg-black rounded-lg border-4 border-retro-cyan shadow-neon-cyan mb-8 overflow-hidden group">
