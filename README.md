@@ -1,20 +1,61 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Game Hub
 
-# Run and deploy your AI Studio app
+Arcade gaming platform for kids aged 7-15. Play games created by young developers.
 
-This contains everything you need to run your app locally.
+## Quick Start
 
-View your app in AI Studio: https://ai.studio/apps/drive/1CK23W4zOUERJy8LXTxfQW9_S6-p_ebI5
+```bash
+npm install
+npm run dev
+```
 
-## Run Locally
+Visit `http://localhost:5173`
 
-**Prerequisites:**  Node.js
+## Adding a Game
 
+See [docs/ADDING_GAMES.md](docs/ADDING_GAMES.md)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Style Guide
+
+See [docs/STYLE_GUIDE.md](docs/STYLE_GUIDE.md)
+
+## Converting Pygame Games
+
+See [docs/PYGAME_CONVERSION.md](docs/PYGAME_CONVERSION.md)
+
+## Structure
+
+```
+src/
+├── components/   # Reusable UI components
+├── pages/        # Route pages
+├── games/        # Game engines
+├── data/         # Game/creator data
+└── types/        # TypeScript types
+```
+
+## Deploy
+
+Push to main branch → auto-deploys via Vercel
+
+## Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- Canvas API
+
+## Contributing
+
+1. Create game in `src/games/`
+2. Add metadata to `src/data/games.ts`
+3. Create page in `src/pages/games/`
+4. Add route in `App.tsx`
+5. Test locally
+6. Submit for review
+
+## Support
+
+Help keep the arcade running! [Buy us a coffee](#)

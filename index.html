@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>About Us - GameZone</title>
+    <title>Game Hub - Arcade Gaming for Kids</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -13,6 +13,10 @@
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&amp;display=swap"
       rel="stylesheet"
     />
     <link
@@ -32,10 +36,20 @@
               "arcade-pink": "#EC4899",
               "arcade-yellow": "#FBBF24",
               "arcade-cyan": "#22D3EE",
+              "accent-yellow": "#FFE600",
+              "accent-cyan": "#00E0FF",
+              "accent-purple": "#A855F7",
+              "accent-pink": "#f43f8e",
+              "retro-purple": "#2d0b4d",
+              "retro-pink": "#f43f8e",
+              "retro-cyan": "#00f0ff",
+              "retro-yellow": "#fffc40"
             },
             fontFamily: {
               display: ["Space Grotesk"],
               arcade: ['"Press Start 2P"', 'cursive'],
+              heading: ['"Press Start 2P"', 'cursive'],
+              mono: ['"VT323"', 'monospace']
             },
             borderRadius: {
               DEFAULT: "0.25rem",
@@ -43,11 +57,41 @@
               xl: "0.75rem",
               full: "9999px",
             },
+            boxShadow: {
+              "glow-primary": "0 0 15px rgba(255, 59, 129, 0.6), 0 0 5px rgba(255, 59, 129, 0.8)",
+              "glow-cyan": "0 0 15px rgba(0, 224, 255, 0.6), 0 0 5px rgba(0, 224, 255, 0.8)",
+              "glow-yellow": "0 0 15px rgba(255, 230, 0, 0.6), 0 0 5px rgba(255, 230, 0, 0.8)",
+              "glow-purple": "0 0 15px rgba(168, 85, 247, 0.6), 0 0 5px rgba(168, 85, 247, 0.8)",
+              "glow-pink": "0 0 15px rgba(244, 63, 142, 0.6), 0 0 5px rgba(244, 63, 142, 0.8)",
+              "neon-pink": "0 0 5px #f43f8e, 0 0 10px #f43f8e, 0 0 15px #f43f8e",
+              "neon-cyan": "0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 15px #00f0ff",
+              "neon-yellow-sm": "0 0 3px #fffc40, 0 0 5px #fffc40"
+            }
           },
         },
       };
     </script>
-    <style>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .nav-clip {
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 95% 100%, 5% 100%, 0 80%);
+        }
+        .text-glow-yellow {
+          text-shadow: 0 0 8px #FFE600, 0 0 12px #FFE600;
+        }
+        .pixel-art {
+          image-rendering: pixelated;
+          image-rendering: -moz-crisp-edges;
+          image-rendering: -webkit-crisp-edges;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      }
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
@@ -78,5 +122,6 @@
 </head>
   <body class="bg-background-light dark:bg-background-dark font-display text-[#1f2937] dark:text-white">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

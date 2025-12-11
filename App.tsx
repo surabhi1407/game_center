@@ -1,28 +1,36 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import CrewGrid from './components/CrewGrid';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './src/components/layout/Header';
+import Footer from './src/components/layout/Footer';
+import Home from './src/pages/Home';
+import Games from './src/pages/Games';
+import Creators from './src/pages/Creators';
+import SubmitGame from './src/pages/SubmitGame';
+import Pong from './src/pages/games/Pong';
 
 const App: React.FC = () => {
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-      <div className="layout-container flex h-full grow flex-col">
-        <div className="flex flex-1 justify-center px-4 py-5 sm:px-10 md:px-20 lg:px-40">
-          <div className="layout-content-container flex w-full max-w-[960px] flex-1 flex-col">
-            
-            <Header />
+    <Router>
+      <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div className="layout-container flex h-full grow flex-col">
+          <Header />
+          
+          <main className="flex flex-1 justify-center py-5">
+            <div className="layout-content-container flex w-full max-w-[1200px] flex-1 flex-col px-4 sm:px-8">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/games" element={<Games />} />
+                <Route path="/games/pong" element={<Pong />} />
+                <Route path="/creators" element={<Creators />} />
+                <Route path="/submit" element={<SubmitGame />} />
+              </Routes>
+            </div>
+          </main>
 
-            <main className="flex flex-col gap-8 py-8 sm:gap-12 sm:py-12">
-              <Hero />
-              <CrewGrid />
-              <Footer />
-            </main>
-            
-          </div>
+          <Footer />
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

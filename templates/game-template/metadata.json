@@ -1,0 +1,18 @@
+{
+  "id": "your-game-id",
+  "title": "Your Game Title",
+  "slug": "your-game-slug",
+  "creator": "creator-id",
+  "description": "Brief description of your game",
+  "thumbnail": "https://example.com/your-game-thumbnail.png",
+  "category": "action|puzzle|platformer|racing|shooter|adventure|arcade",
+  "difficulty": "easy|medium|hard",
+  "glowColor": "cyan|yellow|purple|pink|primary",
+  "isNew": true,
+  "controls": [
+    { "key": "Arrow Keys", "action": "Move" },
+    { "key": "Space", "action": "Jump/Action" }
+  ],
+  "tags": ["arcade", "retro", "multiplayer"]
+}
+
