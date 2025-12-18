@@ -53,13 +53,13 @@ const Header: React.FC = () => {
 
       {/* Desktop Action */}
       <div className="hidden items-center gap-4 md:flex">
-        <a
+        <Link
+          to="/support"
           className="flex h-10 items-center gap-2 rounded-md bg-arcade-pink px-4 py-2 text-sm transition-transform hover:scale-105"
-          href="#"
         >
           <span className="material-symbols-outlined text-base">favorite</span>
           <span>Support Us</span>
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu Toggle */}
@@ -87,10 +87,10 @@ const Header: React.FC = () => {
           <Link to="/submit" className={`nav-link py-2 text-base ${isActive('/submit') ? 'font-bold text-arcade-pink' : 'text-arcade-cyan'}`}>
             Submit Game
           </Link>
-          <a className="mt-2 flex items-center justify-center gap-2 rounded-md bg-arcade-pink px-4 py-2 text-base" href="#">
+          <Link to="/support" className="mt-2 flex items-center justify-center gap-2 rounded-md bg-arcade-pink px-4 py-2 text-base">
             <span className="material-symbols-outlined text-base">favorite</span>
             <span>Support Us</span>
-          </a>
+          </Link>
         </div>
       )}
     </header>

@@ -29,18 +29,12 @@ const Home: React.FC = () => {
               Welcome to the ultimate arcade gaming platform for kids aged 7-15!
               Play awesome games created by young developers just like you.
             </h2>
-            <div className="flex gap-4 justify-center mt-4">
+            <div className="flex justify-center mt-4">
               <Link
                 to="/games"
                 className="flex h-12 items-center justify-center rounded-lg bg-arcade-cyan px-6 font-arcade text-sm text-white transition-transform hover:scale-105"
               >
                 Play Games
-              </Link>
-              <Link
-                to="/creators"
-                className="flex h-12 items-center justify-center rounded-lg bg-arcade-pink px-6 font-arcade text-sm text-white transition-transform hover:scale-105"
-              >
-                Meet Creators
               </Link>
             </div>
           </div>

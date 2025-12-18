@@ -17,22 +17,7 @@ export const creators: Creator[] = [
     altText: 'Stylized illustration of a girl with futuristic glasses',
     themeColor: 'arcade-pink'
   },
-  {
-    id: 'leo',
-    name: 'Leo',
-    role: 'Explorer of Pixel Worlds.',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCQbxHx3P6l8YpqPQdsZsB0Imgw8QPqchvc1-WaNcrYmaDuceI0bFzfBVLaVVZm6OXWu9x8X9fb5PaMZ_TdKsqS3oWTQkNY4JX9vV3CRb5mvd2clkijKlgDB-qkKwWHrU3qtOKLg_DAtKsvdlxP1tj9KnZxl01oRFbHlu3wJZSjiF6TOqiWXFXaBEPPI1OV8T9F3octY6DeEA45lnww4KmuWygfjTTHvVx_lJVmuw9k9neWyefLB89Lnt1hVro_5zycHW3vcAF97cvH',
-    altText: 'Stylized illustration of a boy with neon headphones',
-    themeColor: 'arcade-yellow'
-  },
-  {
-    id: 'zoya',
-    name: 'Zoya',
-    role: 'Queen of Arcade Classics.',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC2OFy6E_me640j9hX-uC-z-7mr9wBC3xj06zXYrMN6VERhft7Oj4m_905rJKZXAijmC05vNx9hGzd-0vm2_R6-4eMNZ6RouAVbBiocXJBKV7AappKtQkBQeM9X4XpKjjt0IWL2ZUXeRi2255cdnqrWGdElneIB2O3DWAu_Ygq-Ug5AhbEfUAECrfIlifl7p9YMyH9UvwvvL4tu2iyY2ak1u_r5cBKn5QMQZwxQNh6rufiUYR4b5zHSkgxAypTsCdOujxYsRljNCHzx',
-    altText: 'Stylized illustration of a girl with a futuristic visor',
-    themeColor: 'arcade-cyan'
-  }
+
 ];
 
 export const gameMaster: GameMaster = {
@@ -40,7 +25,7 @@ export const gameMaster: GameMaster = {
   role: 'Game Master',
   description: 'I use AI to transform kids\' creative ideas into playable games, making coding fun and accessible for everyone. Every game submission becomes a reality through the magic of AI-powered development!',
   imageUrl: 'https://avatars.githubusercontent.com/u/yourusername?v=4', // Replace with your GitHub avatar
-  githubUrl: 'https://github.com/yourusername', // Replace with your actual GitHub URL
-  skills: []
+  githubUrl: 'https://github.com/yourusername', 
+  skills: ['AI Development', 'Game Design', 'React', 'TypeScript']
 };
 

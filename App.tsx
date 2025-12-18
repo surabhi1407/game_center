@@ -6,6 +6,7 @@ import Home from './src/pages/Home';
 import Games from './src/pages/Games';
 import Creators from './src/pages/Creators';
 import SubmitGame from './src/pages/SubmitGame';
+import SupportUs from './src/pages/SupportUs';
 import Pong from './src/pages/games/Pong';
 
 const App: React.FC = () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
                 <Route path="/games/pong" element={<Pong />} />
                 <Route path="/creators" element={<Creators />} />
                 <Route path="/submit" element={<SubmitGame />} />
+                <Route path="/support" element={<SupportUs />} />
               </Routes>
             </div>
           </main>
